@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  Upload-to-SFTP:
+  Upload-to-Staging:
     runs-on: ubuntu-latest
 
     steps:
