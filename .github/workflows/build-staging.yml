@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
+      - name: 🗝️ Set GitHub Account
+        uses: fregante/setup-git-user@v2    
 
       - uses: actions/setup-node@v3
         with:
