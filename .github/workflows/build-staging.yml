@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set Up Git 
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
       - name: 🗝️ Set GitHub Information Account
@@ -18,8 +22,4 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - name: Set Up Git
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
       - run: npm run deploy-staging
