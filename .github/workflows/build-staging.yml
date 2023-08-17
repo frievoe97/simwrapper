@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
       - name: Set Up Git 
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+          git config --local user.name "github-actions[bot]"   
       - name: 🗝️ Set GitHub Information Account
         uses: fregante/setup-git-user@v2    
 
