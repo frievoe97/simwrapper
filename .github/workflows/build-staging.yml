@@ -15,9 +15,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"   
-      - name: 🗝️ Set GitHub Information Account
-        uses: fregante/setup-git-user@v2    
-
       - uses: actions/setup-node@v3
         with:
           node-version: 18
